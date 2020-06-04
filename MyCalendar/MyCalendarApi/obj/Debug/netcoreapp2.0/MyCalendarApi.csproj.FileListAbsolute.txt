@@ -1,3 +1,0 @@
-C:\Users\Alvaro\Source\repos\MyCalendar\MyCalendarApi\obj\Debug\netcoreapp2.0\MyCalendarApi.csprojAssemblyReference.cache
-C:\Users\Alvaro\Source\repos\MyCalendar\MyCalendarApi\obj\Debug\netcoreapp2.0\MyCalendarApi.AssemblyInfoInputs.cache
-C:\Users\Alvaro\Source\repos\MyCalendar\MyCalendarApi\obj\Debug\netcoreapp2.0\MyCalendarApi.AssemblyInfo.cs
