@@ -11,4 +11,4 @@ Navigate to `https://localhost:5001/swagger/index.html` and explore the methods 
 
 ## Deployment
 
-Install API in IIS Service
+Install API in IIS Service and integrate with your interface
