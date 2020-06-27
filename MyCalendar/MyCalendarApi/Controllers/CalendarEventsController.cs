@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyCalendarApi.Abstractions;
-using MyCalendarApi.Models;
+using MyCalendarContracts;
+using MyCalendarModels.Models;
+using MyCalendarContracts.Contracts;
+
 
 namespace MyCalendarApi.Controllers
 {

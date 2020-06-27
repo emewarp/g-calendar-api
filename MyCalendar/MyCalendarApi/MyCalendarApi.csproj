@@ -1,23 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.44.1.1886" />
+    <Compile Remove="token.json\**" />
+    <Content Remove="token.json\**" />
+    <EmbeddedResource Remove="token.json\**" />
+    <None Remove="token.json\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Calendar.v3" Version="1.46.0.1986" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="credentials.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="token.json\" />
+    <ProjectReference Include="..\MyCalendarContracts\MyCalendarDomain.csproj" />
+    <ProjectReference Include="..\MyCalendarModels\MyCalendarModels.csproj" />
   </ItemGroup>
 
 
