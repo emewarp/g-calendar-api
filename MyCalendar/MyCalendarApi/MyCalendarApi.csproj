@@ -25,5 +25,4 @@
     <ProjectReference Include="..\MyCalendarModels\MyCalendarModels.csproj" />
   </ItemGroup>
 
-
 </Project>
