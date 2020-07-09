@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyCalendarContracts;
-using MyCalendarModels.Models;
 using MyCalendarContracts.Contracts;
-
+using MyCalendarModels.Models;
 
 namespace MyCalendarApi.Controllers
 {
     [ApiController]
-    [Route("mycalendar")]
+    [Route("calendars")]
     public class CalendarEventsController : ControllerBase
     {
         private IMyCalendarService service;
@@ -17,31 +16,31 @@ namespace MyCalendarApi.Controllers
             service = new MyCalendarService();
         }
 
-        [HttpGet("get")]
+        [HttpGet("{calendarId}/events")]
         public CalendarEvents GetAllEvents(string calendarId)
         {
             return service.GetAllEvents(calendarId);
         }
 
-        [HttpGet("get/{eventId}")]
+        [HttpGet("{calendarId}/events/{eventId}")]
         public CalendarEvent GetEvent(string calendarId, string eventId)
         {
             return service.GetEvent(calendarId, eventId);
         }
 
-        [HttpPost]
+        [HttpPost("{calendarId}/events")]
         public CalendarEvent CreateEvent(CalendarEvent myEvent, string calendarId)
         {
             return service.CreateEvent(myEvent, calendarId);
         }
 
-        [HttpPut("update")]
+        [HttpPut("{calendarId}/events/{eventId}")]
         public CalendarEvent UpdateEvent(CalendarEvent update, string calendarId, string eventId)
         {
             return service.UpdateEvent(update, calendarId, eventId);
         }
 
-        [HttpDelete("delete")]
+        [HttpDelete("{calendarId}/events/{eventId}")]
         public bool DeleteEvent(string calendarId, string eventId)
         {
             return service.DeleteEvent(calendarId, eventId);
